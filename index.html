@@ -13,7 +13,7 @@
             padding: 40px 20px;
             color: #333;
         }
-        
+
         h1 {
             font-size: 2.5em;
             margin-bottom: 0.8em;
@@ -22,29 +22,45 @@
             font-weight: normal;
             letter-spacing: -0.02em;
         }
-        
+
         .post {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid #eee;
         }
-        
+
+        .post:last-child {
+            border-bottom: none;
+        }
+
         .post h2 {
             margin-bottom: 10px;
         }
-        
+
+        .post h2 a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .post h2 a:hover {
+            text-decoration: underline;
+        }
+
         .post-date {
             color: #666;
             font-size: 0.9em;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
-        
-        .post-content {
-            text-align: justify;
+
+        .post-teaser {
+            font-size: 1em;
+            color: #555;
         }
-        
+
         a {
             color: #333;
         }
-        
+
         a:hover {
             text-decoration: none;
         }
@@ -52,84 +68,18 @@
 </head>
 <body>
     <h1>mgy.ai</h1>
-    
+
     <article class="post">
-        <h2>The Last Enterprise Software Company</h2>
-        <div class="post-date">August 25, 2025</div>
-        <div class="post-content">
-            <h3>The Burning Platform</h3>
-            <p>Enterprise software is a $650B industry built on a lie: that business logic must be carved in stone.</p>
-            
-            <p>Every Fortune 500 runs on the same three-layer architecture from the 1990s: static databases, hardcoded APIs, rigid interfaces. When business needs change - and they always do - companies don't buy software. They buy $50M consulting projects. The $300B consulting industry exists because software doesn't actually work. It just pretends to.</p>
-            
-            <p>But here's what everyone's missing: AI doesn't make this system better. It makes it obsolete.</p>
-            
-            <h3>The Technical Revolution</h3>
-            <h4>What Changes Everything</h4>
-            <p>We're not building chatbots that query existing systems. We're not building copilots that help developers code faster. We're building AI that generates entire applications - database schemas, API logic, and user interfaces - through conversation, then persists these as production-ready systems.</p>
-            
-            <p>The difference is fundamental: Users don't talk to their data. They talk to their application, which rewrites itself.</p>
-            
-            <h4>How It Actually Works</h4>
-            <p>When a user says, "Show daily performance for Zone A, but only hours with recorded operator time, cross-referenced with inventory levels," traditional systems fail. They lack the endpoint to get that specific data. Engineers would have to write, test, validate, and deploy it.</p>
-            
-            <p>Our system generates the entire stack in minutes:</p>
-            
-            <p><strong>Dynamic Backend Generation</strong> The AI writes a custom procedure combining multiple data sources, applying business logic, and returning only what's needed. This becomes a persistent, secure API endpoint that can now be reused by this and other services. Stored, sandboxed, and available immediately via REST. No sprint planning. No deployment cycle.</p>
-            
-            <p><strong>Dynamic Frontend Generation</strong> A complete React component - not template - is generated with full state management and backend integration to render data from the newly created smart procedure. Want to see the data as a table? Done. A heatmap? Done. A 3D visualization overlaid on the building CAD file? Done. Every component is conversational. Users can modify, extend, or rebuild by describing what they want and the frontend regenerates itself.</p>
-            
-            <p><strong>Intelligent Data Layer</strong> Instead of rigid schemas, the AI continuously optimizes data structures based on usage patterns. New data source? The AI immediately maps relationships, suggests storage patterns, and generates migration procedures. It's like having the world's best DBA watching every query, optimizing in real-time.</p>
-            
-            <h3>The Paradigm Shift</h3>
-            <p>Traditional software faces O(n²) complexity - every new feature potentially breaks existing ones. Dynamic software achieves O(1) - each component is isolated, regenerated fresh, incorporating all learnings but no legacy constraints.</p>
-            
-            <p>The cost of change approaches zero. Technical debt becomes impossible. Software becomes liquid.</p>
-            
-            <h3>The Hard Problems</h3>
-            <h4>Technical Challenges</h4>
-            <p>We're not naive about what's hard:</p>
-            
-            <p><strong>Compliance & Governance:</strong> Generated code must be auditable. We must maintain a full lineage of every generation decision, version control for AI prompts, and compliance templates for regulated industries.</p>
-            
-            <p><strong>Integration Reality:</strong> Enterprises have thousands of legacy systems. Our bridge: AI-generated adapters that speak both languages, translating between dynamic and static worlds.</p>
-            
-            <p><strong>Trust & Reliability:</strong> Production systems can't be black boxes. Every generated component must include explanations, test suites, and rollback capabilities.</p>
-            
-            <h4>Organizational Antibodies</h4>
-            <p>The biggest challenge isn't technical - it's human. IT departments see an existential threat. Procurement doesn't have a category for this. The solution: position as augmentation, not replacement. IT evolves from coding to orchestrating. Start with non-critical systems, prove value, expand scope.</p>
-            
-            <h3>The Transition Path</h3>
-            <p>You can't rip out SAP overnight. The migration looks like:</p>
-            
-            <p><strong>Shadow Mode:</strong> AI system runs in parallel for niche applications, proving equivalent results</p>
-            <p><strong>Hybrid Operations:</strong> New functions are now built in AI, core systems unchanged</p>
-            <p><strong>Gradual Absorption:</strong> Module by module, the dynamic system takes over the legacy stack</p>
-            
-            <p>Salesforce ($270B), Oracle ($350B), SAP ($220B) - their valuations assume two things: software is hard to build, and switching costs are prohibitive. Both assumptions are failing. These companies can't pivot - their entire organizations, from sales to engineering, are structured around complexity. Their professional services revenue (often 2-3x license fees) evaporates. Their platforms become commodities.</p>
-            
-            <p>The last enterprise software company won't serve hundreds of thousands of customers. It will serve tens of millions. Every business on Earth. Because when software generation costs approach zero, market size explodes. The business model inverts: no per-seat licensing (users cost nothing), no implementation fees (happens through conversation), pure value capture through a small percentage of operational efficiency gained.</p>
-            
-            <p>This isn't a ten-year transition. It's happening now. Early adopters are running AI-generated APIs in production today. Within a year, we'll see the first complete enterprise running fully dynamic systems. By year two, migration tools mature and consulting firms pivot or die. Year three brings dynamic as default for new implementations. By year five, legacy vendors acquire or acquiesce.</p>
-            
-            <h3>The Last Recursion</h3>
-            <p>Every enterprise vendor is about to experience what newspapers felt in 2007, taxis with Uber, Blockbuster with Netflix. Except faster. More violent. More complete.</p>
-            
-            <p>Each line of code we write accelerates us towards our goal of never having to write another line of code again.</p>
-            
-            <p>Companies that move first don't just save money. They become fundamentally different organisms. They operate on a different clock speed. They describe problems and find solutions.</p>
-            
-            <p>Meanwhile, their competitors are still in architecture review boards debating microservices vs. monoliths.</p>
-            
-            <p>Before we know it, agents will not just generate APIs and frontends, but deploy, manage, and upgrade infrastructure components on the fly. It's just a matter of tooling. It's the ultimate full-stack engineer. Everywhere, all at once, instantly capable of doing anything across an organization.</p>
-            
-            <p>The question isn't whether this happens. It's whether you're holding the dynamite - or standing on it.</p>
-            
-            <p>The last enterprise software company is being built right now. It will help build everything else.</p>
-            
-            <p>And then, in the most beautiful recursive loop in business history, it will eliminate the need for itself.</p>
-        </div>
+        <h2><a href="/the-multiple-migrates.html">The Multiple Migrates</a></h2>
+        <div class="post-date">March 22, 2026</div>
+        <div class="post-teaser">SaaS valuation multiples are not durable — and when AI collapses the cost of software creation toward zero, the margin does not disappear but migrates downstream to the operators who use software to run real businesses.</div>
     </article>
-    
+
+    <article class="post">
+        <h2><a href="/the-last-enterprise-software-company.html">The Last Enterprise Software Company</a></h2>
+        <div class="post-date">August 25, 2025</div>
+        <div class="post-teaser">Enterprise software is a $650B industry built on a lie — and AI doesn't make the incumbent architecture better, it makes it obsolete.</div>
+    </article>
+
 </body>
 </html>
