@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Power Is in the Harness — mgy.ai</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.8em;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            font-weight: normal;
+            letter-spacing: -0.02em;
+        }
+
+        .post h2 {
+            margin-bottom: 10px;
+        }
+
+        .post-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .post-content {
+            text-align: justify;
+        }
+
+        a {
+            color: #333;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        figure.sketch {
+            margin: 35px auto;
+            text-align: center;
+        }
+
+        figure.sketch svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figure.sketch svg text,
+        figure.sketch figcaption {
+            font-family: 'Bradley Hand', 'Segoe Print', 'Comic Sans MS', 'Chalkboard SE', cursive;
+        }
+
+        figure.sketch figcaption {
+            color: #666;
+            font-size: 0.85em;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="/" style="text-decoration:none;color:inherit;">mgy.ai</a></h1>
+
+    <article class="post">
+        <h2>The Power Is in the Harness</h2>
+        <div class="post-date">July 18, 2026</div>
+        <div class="post-content">
+            <h3>One Set of Hands</h3>
+            <p>Evolution didn't give us different hands for every task. We got one set of hands - general, limited, observable - and civilization made them safe not by removing them but by constraining what they can touch: locks, badges, dual signatures. A bank teller can move millions. Not because anyone trusts them with everything, but because the system makes most wrong actions impossible.</p>
+
+            <p>The AI industry is building the opposite. Every vendor pitch is more: more tools, more integrations, more autonomy. Agents with your email, your database, your production credentials. Every capability gets bolted on like an extra hand - and every extra hand is another audit surface, another way for things to leave the building.</p>
+
+            <p>Enterprise buyers feel exactly the fear this architecture deserves: if it can touch everything, it can leak everything. They're right.</p>
+
+            <p>But here's what everyone is missing: the authority you can safely delegate to an AI scales inversely with its capability surface. Fewer hands, fewer audit surfaces, lower risk - and more real power delegated. The power is not in the model. The power is in the harness.</p>
+
+            <h3>The Narrow Waist</h3>
+            <p>Every action our AI systems take - every query, every write, every generated app calling home for data - goes through a single API surface. The generated code never holds a credential. The agent never opens a raw connection. It asks, through one narrow waist, and the harness decides.</p>
+
+            <p>This is not a new idea. The internet scaled because everything squeezes through IP. The browser figured out how to run hostile code from strangers - not by trusting the code, but by giving it exactly one guarded way to touch the world. Same thing here: the model can be brilliant, erratic, or manipulated… it doesn't matter, because the set of things it can physically do is small and enumerated.</p>
+
+            <p>And it's more literal than it sounds. In our platform, drafting an email goes through the same endpoint as creating a dashboard. Both are one create operation - a request to create a model of a certain type, with the same scope checks and the same audit log. The agent doesn't get an email tool, a dashboard tool, a report tool… it gets one verb, and because everything runs through the same surface, we control exactly what the nouns can be.</p>
+
+            <p>Reading works the same way. No connector per system. A minimal set of query tools reaches the core system, the integrated systems, the databases - all behind the same waist, all with the same injected scope. Adding an integration doesn't add a new hand. The hands stay the same; the world behind them grows.</p>
+
+            <figure class="sketch">
+                <svg viewBox="0 0 720 320" role="img" aria-label="Hand-drawn diagram. On the left, a blob labeled 'the model (infinitely capable)'. Lines converge into a small rectangle listing create, read, update, delete - labeled 'one surface (same scope checks on every call)' - then fan out to the right toward: core system, integrated systems, external data shares, emails, dashboards, everything else.">
+                    <!-- the model blob -->
+                    <path d="M 55 168 C 52 138, 90 122, 125 124 C 162 126, 186 142, 184 170 C 182 199, 148 214, 112 212 C 78 210, 58 196, 56 172" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    <text x="120" y="163" font-size="19" fill="#333" text-anchor="middle">the model</text>
+                    <text x="120" y="186" font-size="13" fill="#555" text-anchor="middle">(infinitely capable)</text>
+                    <!-- converging lines -->
+                    <path d="M 186 148 C 220 150, 250 158, 278 163" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M 188 168 C 220 168, 250 168, 278 168" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M 186 188 C 220 186, 250 178, 278 173" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round"/>
+                    <!-- the waist: CRUD rectangle -->
+                    <path d="M 286 126 C 310 123, 342 124, 362 126 C 365 150, 364 186, 362 210 C 338 213, 310 212, 288 210 C 285 184, 285 152, 286 126" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    <text x="324" y="150" font-size="13" fill="#333" text-anchor="middle">create</text>
+                    <text x="324" y="168" font-size="13" fill="#333" text-anchor="middle">read</text>
+                    <text x="324" y="186" font-size="13" fill="#333" text-anchor="middle">update</text>
+                    <text x="324" y="204" font-size="13" fill="#333" text-anchor="middle">delete</text>
+                    <!-- diverging lines -->
+                    <path d="M 366 138 C 420 112, 465 84, 522 58" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M 366 150 C 420 136, 465 116, 522 102" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M 366 163 C 425 158, 470 150, 522 146" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M 366 176 C 425 180, 470 186, 522 190" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M 366 188 C 420 200, 465 218, 522 233" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M 366 200 C 420 224, 462 252, 522 277" fill="none" stroke="#333" stroke-width="1.8" stroke-linecap="round"/>
+                    <!-- right labels -->
+                    <text x="530" y="62" font-size="15" fill="#555">core system</text>
+                    <text x="530" y="106" font-size="15" fill="#555">integrated systems</text>
+                    <text x="530" y="150" font-size="15" fill="#555">external data shares</text>
+                    <text x="530" y="194" font-size="15" fill="#555">emails</text>
+                    <text x="530" y="238" font-size="15" fill="#555">dashboards</text>
+                    <text x="530" y="282" font-size="15" fill="#555">everything else…</text>
+                    <!-- waist label -->
+                    <path d="M 240 240 C 258 230, 275 222, 290 214" fill="none" stroke="#555" stroke-width="1.4" stroke-linecap="round"/>
+                    <text x="220" y="258" font-size="16" fill="#333" text-anchor="middle">one surface</text>
+                    <text x="220" y="278" font-size="13" fill="#555" text-anchor="middle">(same scope checks on every call)</text>
+                </svg>
+                <figcaption>fig. 1 - the narrow waist</figcaption>
+            </figure>
+
+            <p>The part that matters most is where the context lives. Tenant scope, session, permissions - the model doesn't choose any of it. The harness injects it on every call. The model cannot cross a customer boundary. Not because a prompt says so, but because the request cannot be expressed. Policy says "do not leak data." Physics says the pipe does not exist.</p>
+
+            <p>Alignment is what you hope for. Capability scoping is what you deploy.</p>
+
+            <h3>Fewer Tools, More Power</h3>
+            <p>An agent with two hundred tools and open network access gets a sandbox, a babysitter, and a pilot that dies in security review. An agent with nine narrowly-scoped tools behind one surface can be handed production write access - because every one of those nine is an answered security question. Every tool you remove from an agent is a paragraph you remove from the security questionnaire.</p>
+
+            <p>Security reviews don't fail because systems are dangerous. They fail because nobody can hold the whole capability surface in their head. A small, closed set of actions behind one gateway means a reviewer can build a complete model of the system - and the list of things it cannot do is not a promise, it's an architecture. If you can enumerate it, you can audit it. If you can audit it, you can trust it. If you can trust it, you can delegate to it. And delegation, not capability, is where the value of AI actually lives.</p>
+
+            <p>The maximalists have it exactly backwards. "Give the agent everything it might need" is the new chmod 777: works great in the demo, and it's why the deployment never leaves the demo.</p>
+
+            <h3>The Fear Is Rational. The Answer Is Architectural.</h3>
+            <p>Every enterprise AI deal stalls on the same three questions. Does our data train your model? Can it move data across boundaries? What happens when someone prompt-injects it?</p>
+
+            <p>The losing answer is a trust-center page and a SOC 2 badge. The buyer isn't afraid of your people. They're afraid of a system that reads untrusted input, touches private data, and has a channel to the outside world. That combination is the whole anatomy of an AI leak - and it takes all three. The narrow waist exists to make sure they never end up in the same place.</p>
+
+            <p>The winning answer is a diagram. Here's the one surface everything goes through. Here's the complete list of actions the model can take. Here's why exfiltration has no code path. You're not asking anyone to trust your intentions - you're showing them a system they can reason about themselves.</p>
+
+            <p>And here's the part most people miss: a harnessed agent is more auditable than a human employee. Every action is a typed, logged, parameterized call - who asked, what tool, what arguments, which tenant. A human clicking around a UI leaves worse forensics. The "scary" AI is the most surveilled worker you've ever hired. One set of hands, every motion on tape.</p>
+
+            <h3>Trust Is Shown, Not Promised</h3>
+            <p>In the AI era, the security architecture isn't the appendix of the pitch deck. It is the pitch deck. "What can't it do" is the feature list. Partners don't extend trust because you promised to be careful - they extend it because you showed them the cage and they couldn't find a way out either. The strongest position in an enterprise AI sale is inviting the customer's security team to attack the narrow waist. A system built around one surface survives that meeting. A system built around two hundred integrations doesn't attend it.</p>
+
+            <p><a href="/the-last-enterprise-software-company.html">We argued in August</a> that the cost of creating software is collapsing toward zero. <a href="/the-multiple-migrates.html">In March</a>, that the margin migrates to operators. Here's the third piece: models are commoditizing fast, and every competitor calls the same frontier APIs. What doesn't commoditize is the harness - the tool schemas, the tenant isolation, the injected context, the audit trail. That layer is earned customer by customer, and it compounds.</p>
+
+            <p>You don't buy the model. You buy the harness.</p>
+
+            <p>The safest AI is not the one that refuses. It's the one that can't. And in the enterprise, the AI that can't do most things is the only one that will ever be allowed to do the things that matter.</p>
+        </div>
+    </article>
+
+</body>
+</html>
