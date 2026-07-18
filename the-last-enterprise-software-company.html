@@ -37,6 +37,24 @@
             letter-spacing: -0.02em;
         }
 
+        .vf {
+            position: relative;
+            display: inline-block;
+            padding: 10px 16px;
+        }
+
+        .vf i {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 0 solid #E20000;
+        }
+
+        .vf .tl { top: 0; left: 0; border-top-width: 3px; border-left-width: 3px; }
+        .vf .tr { top: 0; right: 0; border-top-width: 3px; border-right-width: 3px; }
+        .vf .br { bottom: 0; right: 0; border-bottom-width: 3px; border-right-width: 3px; }
+        .vf .bl { bottom: 0; left: 0; border-bottom-width: 3px; border-left-width: 3px; }
+
         .post h2 {
             margin-bottom: 10px;
         }
@@ -61,7 +79,7 @@
     </style>
 </head>
 <body>
-    <h1><a href="/" style="text-decoration:none;color:inherit;">mgy.ai</a><svg width="128" height="12" viewBox="0 0 128 12" style="display:block;margin-top:3px"><path d="M 3 7 C 22 3, 45 10, 66 6 S 106 4, 125 8" stroke="#E20000" stroke-width="3" fill="none" stroke-linecap="round"/></svg></h1>
+    <h1><span class="vf"><i class="tl"></i><i class="tr"></i><i class="br"></i><i class="bl"></i><a href="/" style="text-decoration:none;color:inherit;">mgy.ai</a></span></h1>
 
     <article class="post">
         <h2>The Last Enterprise Software Company</h2>
